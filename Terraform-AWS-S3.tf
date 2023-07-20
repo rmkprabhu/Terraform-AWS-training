@@ -20,7 +20,7 @@ resource "aws_s3_bucket" "onebucket" {
       enabled = true
    }
    tags = {
-     Name = "test-bucket"
+     Name = "test-bucket-hello"
      Environment = "Test"
    }
 }
