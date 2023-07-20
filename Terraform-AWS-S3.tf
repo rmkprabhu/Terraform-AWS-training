@@ -13,6 +13,14 @@ provider "aws" {
   region  = "us-east-1"
 }
 
-resource "aws_s3_bucket" "demos3" {
-    bucket = "${var.bucket_name}"
+resource "aws_s3_bucket" "onebucket" {
+   bucket = "${var.bucket_name}" 
+   acl = "private"
+   versioning {
+      enabled = true
+   }
+   tags = {
+     Name = "test-bucket"
+     Environment = "Test"
+   }
 }
